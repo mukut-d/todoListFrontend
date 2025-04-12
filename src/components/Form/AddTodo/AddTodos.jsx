@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
-import { Context } from "../../store/todoContext";
+import { Context } from "../../../store/todoContext";
+import "./AddTodo.css";
 
 const AddTodos = () => {
   const [todo, setTodo] = useState("");
@@ -15,14 +16,17 @@ const AddTodos = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <input
+        className="input"
         type="text"
         placeholder="enter todos"
         value={todo}
         onChange={addTodohandler}
       />
-      <button onClick={saveTodoHandler}>Add</button>
+      <button className="btn" onClick={saveTodoHandler}>
+        Add
+      </button>
     </div>
   );
 };

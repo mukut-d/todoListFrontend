@@ -29,7 +29,15 @@ const TodoContext = ({ children }) => {
 
   const deleteTodoHandler = (id) => {
     setTodo((prev) => {
-      return [...prev?.filter((item) => item.id !== id)];
+      console.log("cuuren todo " + prev);
+
+      const updatedTodo = prev
+        .filter((item) => item.id !== id)
+        .map((item, index) => {
+          return { id: index + 1, todo: item.todo };
+        });
+
+      return updatedTodo.sort((a, b) => b.id - a.id);
     });
   };
 
@@ -43,8 +51,6 @@ const TodoContext = ({ children }) => {
       return updatedTodo;
     });
   };
-  
-
 
   const todoValues = {
     todo: todo,

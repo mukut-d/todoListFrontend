@@ -17,8 +17,9 @@ const EditTodo = ({ editMode }) => {
   };
 
   return (
-    <div>
+    <div className="main">
       <input
+        className="input"
         type="text"
         placeholder="enter todos"
         value={todo.todo}
@@ -26,8 +27,12 @@ const EditTodo = ({ editMode }) => {
           editTodohandler(e);
         }}
       />
-      <button onClick={saveEditHandler}>Save</button>
-      <button onClick={editMode}>Cancel</button>
+      <button className="btn" onClick={saveEditHandler}>
+        Save
+      </button>
+      <button className="btn" onClick={editMode}>
+        Cancel
+      </button>
     </div>
   );
 };

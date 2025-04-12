@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Table from "./components/Display/Table";
-import AddTodos from "./components/Form/AddTodos";
+import AddTodos from "./components/Form/AddTodo/AddTodos";
 import Header from "./components/Header/Header";
 import EditTodo from "./components/Form/EditTodo";
 
